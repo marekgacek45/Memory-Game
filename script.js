@@ -14,12 +14,10 @@ function flipCard() {
 	if (!hasFlippedCard) {
 		hasFlippedCard = true
 		firstCard = this
-		console.log(firstCard, hasFlippedCard)
 		return
 	} else {
 		hasFlippedCard = false
 		secondCard = this
-		console.log(secondCard, hasFlippedCard)
 	}
 	matchCard()
 }
