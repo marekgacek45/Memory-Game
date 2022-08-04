@@ -24,18 +24,23 @@ function flipCard() {
 }
 
 function matchCard() {
-	if (firstCard.dataset.name === secondCard.dataset.name) {
-		firstCard.removeEventListener('click', flipCard)
+const isMatch = firstCard.dataset.name === secondCard.dataset.name
+
+isMatch ? disableCard() : turnCards()
+}
+
+function disableCard () {
+    firstCard.removeEventListener('click', flipCard)
 		secondCard.removeEventListener('click', flipCard)
-		console.log('ok')
-	} else {
-        lockBoard = true
-		setTimeout(function () {
-			firstCard.classList.remove('flip')
-			secondCard.classList.remove('flip')
-			reset()
-		}, 1000)
-	}
+}
+
+function turnCards () {
+    lockBoard = true
+    setTimeout(function () {
+        firstCard.classList.remove('flip')
+        secondCard.classList.remove('flip')
+        reset()
+    }, 1000)
 }
 
 function reset() {
