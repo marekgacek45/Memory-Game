@@ -29,6 +29,6 @@ Project is created with:
 
 
 ## Live
-https://gacmen45.github.io/Memory-Game/
+https://marekgacek45.github.io/Memory-Game/
 
 </div>
